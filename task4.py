@@ -2,6 +2,28 @@ import math
 
 
 class GeometricObject:
+    """
+    Attributes:
+    -----------
+    - x (float): The x-coordinate of the geometric object. Default is 0.0.
+    - y (float): The y-coordinate of the geometric object. Default is 0.0.
+    - color (str): The color of the geometric object. Default is 'black'.
+    - filled (bool): Whether the geometric object is filled or not. Default is False.
+
+    Methods:
+    --------
+    - __init__(self, x=0.0, y=0.0, color='black', filled=False): Initializes a geometric object.
+    - set_coordinate(self, x, y): Sets the coordinates of the geometric object.
+    - set_color(self, color): Sets the color of the geometric object.
+    - set_filled(self, filled): Sets whether the geometric object is filled or not.
+    - get_x(self): Returns the x-coordinate of the geometric object.
+    - get_y(self): Returns the y-coordinate of the geometric object.
+    - get_color(self): Returns the color of the geometric object.
+    - is_filled(self): Returns whether the geometric object is filled or not.
+    - __str__(self): Returns a string representation of the geometric object.
+    - __repr__(self): Returns a printable representation of the geometric object.
+    """
+
     def __init__(self, x=0.0, y=0.0, color='black', filled=False):
         self.__x = x
         self.__y = y
@@ -36,7 +58,28 @@ class GeometricObject:
     def __repr__(self):
         return self.__str__()
 
+
 class Rectangle(GeometricObject):
+    """
+    Attributes:
+    -----------
+    - x (float): The x-coordinate of the geometric object. Default is 0.0.
+    - y (float): The y-coordinate of the geometric object. Default is 0.0.
+    - width (float): The width of the geometric object. Default is 0.0.
+    - height (float): The height of the geometric object. Default is 0.0.
+    - color (str): The color of the geometric object. Default is 'black'.
+    - filled (bool): Whether the geometric object is filled or not. Default is False.
+
+    Methods:
+    --------
+    - set_width(self, width): Sets the width of the rectangle.
+    - set_height(self, height): Sets the height of the rectangle.
+    - get_width(self): Returns the width of the rectangle.
+    - get_height(self): Returns the height of the rectangle.
+    - get_area(self): Returns the area of the rectangle.
+    - get_perimeter(self): Returns the perimeter of the rectangle.
+        """
+
     def __init__(self, x=0.0, y=0.0, width=0.0, height=0.0, color='black', filled=False):
         super().__init__(x, y, color, filled)
         if width >= 0:
@@ -79,7 +122,26 @@ class Rectangle(GeometricObject):
     def __repr__(self):
         return self.__str__()
 
+
 class Circle(GeometricObject):
+    """
+    Attributes:
+    -----------
+    - x (float): The x-coordinate of the geometric object. Default is 0.0.
+    - y (float): The y-coordinate of the geometric object. Default is 0.0.
+    - radius (float): The radious of the geometric object. Default is 0.0.
+    - color (str): The color of the geometric object. Default is 'black'.
+    - filled (bool): Whether the geometric object is filled or not. Default is False.
+
+    Methods:
+    --------
+    - radius_setter(self, radius): Sets the radius of the circle.
+    - radius_getter(self): Returns the radius of the circle.
+    - get_area(self): Returns the area of the circle.
+    - get_perimeter(self): Returns the perimeter of the circle.
+    - get_diameter(self): Returns the diameter of the circle.
+        """
+
     def __init__(self, x=0.0, y=0.0, radius=0.0, color='black', filled=False):
         super().__init__(x, y, color, filled)
         if radius >= 0:
