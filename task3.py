@@ -38,7 +38,9 @@ class Meeting:
     def count_meeting(date):
         count = 0
         for meeting in Meeting.lst_meeting:
-            if meeting.date == date:
+            meeting_day, meeting_month, meeting_year = meeting.date._date.split('.')
+            day, month, year = date._date.split('.')
+            if int(meeting_day) == int(day) and int(meeting_month) == int(month) and int(meeting_year) == int(year):
                 count += 1
         return count
 
