@@ -139,6 +139,8 @@ class Meeting:
             final += '\n' + User.__str__(x)
         return final
 
+    def __repr__(self):
+        return self.__str__()
 
 class Load:
     """
